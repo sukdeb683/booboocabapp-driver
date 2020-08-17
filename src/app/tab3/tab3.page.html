@@ -1,0 +1,93 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>
+      Boo Boo Cabs
+    </ion-title>
+    <ion-thumbnail slot="start">
+      <img src="assets/img/logo-1.png" size="small" >
+    </ion-thumbnail>
+
+    <ion-button (click)="logout()" slot="end"  color="light" >
+      <ion-icon name="power-outline"></ion-icon>
+      <!-- <ion-icon name="log-out-outline"></ion-icon> -->
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <app-menuone></app-menuone>
+
+
+  <!-- Default Refresher -->
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pullMin="60" pullMax="120" pullFactor=1 >
+    <ion-refresher-content
+    close-duration='280ms'
+    disabled=false></ion-refresher-content>
+  </ion-refresher>
+    
+
+  <!-- <ion-icon name="logo-designernews"></ion-icon>
+  <app-explore-container name="Tab 3 page"></app-explore-container>
+
+  <ion-fab vertical="center" horizontal="end" edge slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="settings"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button>
+        
+        <ion-input value="custom"></ion-input>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab> -->
+
+
+  <ion-card>
+    <!-- <ion-card-header>
+    </ion-card-header> -->
+
+    <ion-card-content class="profile-img">
+      <h2 class="white-text  head-title">My Profile</h2>
+
+      <img [src]="user.imgUrl" >
+      <ion-icon class="edit-icon" name="create-outline"></ion-icon>
+      <br/>
+      <ion-label class="white-text">{{ user.username }} </ion-label>
+    </ion-card-content>
+
+
+      
+    <ion-list>
+      <!-- <ion-icon name="wifi" slot="start"></ion-icon>
+      <ion-label>Card Link Item 1 activated</ion-label> -->
+      <ion-label fixed class='fixedLabel' >First Name </ion-label>
+      <ion-input [(ngModel)]="user.first_name" placeholder="First Name"  clearInput ></ion-input>
+    </ion-list>
+  
+    <ion-list>
+      <!-- <ion-icon name="wine" slot="start"></ion-icon>
+      <ion-label>Card Link Item 2</ion-label> -->
+      <ion-label fixed class='fixedLabel'>Last Name </ion-label>
+      <ion-input  [(ngModel)]="user.last_name"  placeholder="Last Name" clearInput></ion-input>
+    </ion-list>
+  
+    <!-- <ion-item>
+      <ion-label fixed class='fixedLabel'>Email </ion-label>
+      <ion-input [(ngModel)]="user.username"   placeholder="Email" clearInput ></ion-input>
+    </ion-item> -->
+  
+    <ion-list>
+      <ion-label fixed class='fixedLabel'>Phone </ion-label>
+      <ion-input [(ngModel)]="user.phone"   placeholder="Phone"  clearInput ></ion-input>
+    </ion-list>
+
+  
+    <ion-button (click)="saveProfileTextData()"  expand="block" color="warning" >Save</ion-button>
+
+
+  </ion-card>
+  
+
+</ion-content>

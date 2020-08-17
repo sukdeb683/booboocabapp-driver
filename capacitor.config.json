@@ -1,0 +1,7 @@
+{
+  "appId": "com.booboocabs.com",
+  "appName": "booboocabas-passenger",
+  "webDir": "www",
+  "npmClient": "npm",
+  "linuxAndroidStudioPath": "/snap/android-studio/91/android-studio/bin"
+}

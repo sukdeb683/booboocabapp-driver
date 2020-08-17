@@ -1,0 +1,67 @@
+@import './../../theme/variables';@import './../../theme/variables';
+
+
+ion-header{background:$myBg;}
+ion-toolbar{background:$myBg;}
+
+
+ion-content{
+    --ion-background-color: rgb(251, 251, 251);
+}
+
+
+
+ion-input{
+    --background: rgb(255, 255, 255);
+}
+
+
+.fixedLabel {
+    min-width: 30% !important;
+    max-width: 30% !important;
+}
+
+ion-card-header{
+	text-align: center;
+    background:$profileImgBg;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+ion-card-header{
+	ion-card-subtitle{
+		color: #fff;
+		font-weight: 500;
+		font-size: 15px;
+	}
+}
+ion-card-content{
+	img{
+		width: 75px;
+		height: 75px;
+		border-right: 100%;	}
+}
+ion-card-content{text-align: center;}
+.Profile-name{color: #000;}
+
+ion-item{
+	--background:$profilePageBg;
+}
+
+.profile-img{
+	background-color: $profileImgBg;
+}
+.white-text{ color: #fff; }
+
+
+ion-card-content{
+	padding-inline-start: 0pc;
+}
+
+.edit-icon{
+	color: rgb(199, 196, 196);
+}
+ion-list{padding: 0 7px; color: #000;}
+ion-input{margin: 7px 0; border: 1px solid #ccc; border-radius: 5px;height: 32px;}
+ion-list {
+	ion-label{margin-top: 7px;display: block;}
+}
