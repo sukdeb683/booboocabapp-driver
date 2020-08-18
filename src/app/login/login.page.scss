@@ -1,7 +1,38 @@
 ion-content {
-    --background: #fff url("/assets/img/background-9.jpg") no-repeat center center / cover;
+    --background: #fff url("/assets/img/driver-bg.jpg") no-repeat center center / cover;
  }
+ ion-content:after{content: ""; display: block;clear: both;background: #1717176e; position: absolute;top: 0; left: 0; right: 0; bottom: 0;}
 ion-input{font-size: 12px;}
+.login-tab{text-align: center;}
+.login-tab {
+	ion-label{
+		background: #fff;
+		border-radius: 30px;
+		padding: 3px 7px;
+		margin: 0 5px;
+		cursor: pointer;
+		
+	}
+}
+.login-page-outer{position: absolute;top: 40%;left: 50%;z-index: 999; transform: translate(-50%,-50%);width: 100%;}
+ion-thumbnail{margin: 0 auto 15px;}
+ion-card{
+	box-shadow: none;
+	background: #ffffff7d;
+	border: 1px solid #636363;
+    padding:20px 10px;
+    border-radius: 10px;
+}
+ion-input{
+	    border: 1px solid #000;
+    border-radius: 30px;
+    padding: 0 10px !important;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+
+
 
  /**for android**/
 .md{

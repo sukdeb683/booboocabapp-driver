@@ -1,43 +1,35 @@
 
-<ion-header>
-  <ion-toolbar color="dark">
-    <ion-thumbnail slot="start">
-      <img src="assets/img/logo-1.png" size="small" >
-    </ion-thumbnail>
-    <ion-title>Passenger Login </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true">
  
-<ion-content class="ion-padding" >
- 
-  <ion-row>
+  <ion-row class="login-page-outer">
     <ion-col size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
       offset-xl="4">
+        <ion-thumbnail>
+         <img src="assets/img/logo-1.png">
+        </ion-thumbnail>
+        <ion-item class="login-tab" lines="none" color="light-contrast-rgb">
+        
+          <ion-label [routerLink]="['/login']">Login</ion-label>
+          <ion-label [routerLink]="['/register']">SignUp</ion-label>
+        </ion-item>
  
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title class="ion-text-center">Your Account</ion-card-title>
-        </ion-card-header>
+        <ion-card>
  
-        <ion-card-content>
- 
-          <ion-item lines="none">
-            <ion-label position="stacked">Email</ion-label>
+          <ion-card-container>
+            
             <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="credentials.email"></ion-input>
-          </ion-item>
+          </ion-card-container>
  
-          <ion-item lines="none">
-            <ion-label position="stacked">Password</ion-label>
+          <ion-card-container>
             <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="credentials.pw">
             </ion-input>
-          </ion-item>
+          </ion-card-container>
  
-          <ion-button (click)="login()" expand="block" color="warning" >Login</ion-button>
-          <ion-button expand="block"   color="dark" routerLink="/register" routerDirection="forward">Register
-          </ion-button>
+          <ion-button (click)="login()" shape="round" expand="block" fill="outline" color="dark" >Login</ion-button>
+          
  
-        </ion-card-content>
-      </ion-card>
+        </ion-card>
+      
  
     </ion-col>
   </ion-row>

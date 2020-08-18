@@ -1,44 +1,59 @@
-<ion-header>
-  <ion-toolbar color="dark">
-    
-    <ion-thumbnail slot="start">
-      <img src="assets/img/logo-1.png" size="small" >
-    </ion-thumbnail>
-    <ion-title>Register</ion-title>
-    <ion-buttons slot="end">
-      <ion-back-button defaultHref="/"></ion-back-button>
-    </ion-buttons>
 
-  </ion-toolbar>
-</ion-header>
- 
-<ion-content padding>
-  <ion-row>
-    <ion-col class="register-form" size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
+<ion-content [fullscreen]="true">
+ <ion-infinite-scroll>
+  <ion-infinite-scroll-content>
+  <ion-row class="login-page-outer">
+    <ion-col size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
       offset-xl="4">
+        <ion-thumbnail>
+         <img src="assets/img/logo-1.png">
+        </ion-thumbnail>
+        <ion-item class="login-tab" lines="none" color="light-contrast-rgb">
+        
+          <ion-label [routerLink]="['/login']">Login</ion-label>
+          <ion-label [routerLink]="['/register']">SignUp</ion-label>
+        </ion-item>
+ 
+        <ion-card>
+          <ion-item lines="none" color="light-contrast-rgb">
+            
+            <ion-input type="name" placeholder="First Name" name="email" [(ngModel)]="credentials.email"></ion-input>
+          </ion-item>
+          <ion-item lines="none" color="light-contrast-rgb">
+            <ion-input type="name" placeholder="Last Name" name="email" [(ngModel)]="credentials.email"></ion-input>
+          </ion-item>
 
-      <ion-label >Email: </ion-label>
-      <!-- Input with clear button when there is a value -->
-      <ion-input type="email" inputmode="email" pattern="email" clearInput value="" [(ngModel)]="credentials.email"   ></ion-input>
+          <ion-item lines="none" color="light-contrast-rgb">
+            <ion-input type="email" placeholder="Email/Username" name="email" [(ngModel)]="credentials.email"></ion-input>
+          </ion-item>
 
-      <br/>
+          <ion-item lines="none" color="light-contrast-rgb">
+            <ion-input type="text" placeholder="Phone" name="email" [(ngModel)]="credentials.email"></ion-input>
+          </ion-item>
 
-      <ion-label position="fixed">Password: </ion-label>
-      <!-- Input with clear button when there is a value -->
-      <ion-input type="password" inputmode="email" pattern="password" clearInput value="" [(ngModel)]="credentials.pw"   ></ion-input>
+          <ion-item lines="none" color="light-contrast-rgb">
+            
+            <ion-input type="text" placeholder="Your Nar Number" name="email" [(ngModel)]="credentials.email"></ion-input>
+          </ion-item>
+ 
+          <ion-item lines="none" color="light-contrast-rgb">
+            <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="credentials.pw">
+            </ion-input>
+          </ion-item>
+
+          <ion-item lines="none" color="light-contrast-rgb">
+            <ion-input type="password" placeholder="Confirm Password" name="password" [(ngModel)]="credentials.pw">
+            </ion-input>
+          </ion-item>
+ 
+          <ion-button (click)="login()" shape="round" expand="block" fill="outline" color="dark" >Submit</ion-button>
+          
+ 
+        </ion-card>
       
-      <br/>
-
-      <ion-label position="fixed">Re type password: </ion-label>
-      <!-- Input with clear button when there is a value -->
-      <ion-input type="password" inputmode="email" pattern="password" clearInput value="" [(ngModel)]="credentials.pw2"   ></ion-input>
-      
-      <br/>
-      <ion-button (click)="register()" expand="block" color="dark" >Submit</ion-button>
-
-
+ 
     </ion-col>
   </ion-row>
-
- 
+</ion-infinite-scroll-content>
+ </ion-infinite-scroll>
 </ion-content>
